@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartStock — The Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <svg class="th-icon" width="36" height="36" viewBox="4 2 30 26" fill="none">
+      <path d="M7 6.5L10.5 4.5L14 6.5V10.5L10.5 12.5L7 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M14 6.5L17.5 4.5L21 6.5V10.5L17.5 12.5L14 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M21 6.5L24.5 4.5L28 6.5V10.5L24.5 12.5L21 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M10.5 12.5L14 10.5L17.5 12.5V16.5L14 18.5L10.5 16.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M17.5 12.5L21 10.5L24.5 12.5V16.5L21 18.5L17.5 16.5Z" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+      <path d="M24.5 12.5L28 10.5L31.5 12.5V16.5L28 18.5L24.5 16.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <path d="M14 18.5L17.5 16.5L21 18.5V22.5L17.5 24.5L14 22.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <circle cx="10.5" cy="4.5" r="1.5" fill="rgba(255,255,255,0.85)"/>
+      <circle cx="28" cy="6.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="31.5" cy="16.5" r="1.3" fill="rgba(255,255,255,0.55)"/>
+      <circle cx="14" cy="22.5" r="1.2" fill="rgba(255,255,255,0.5)"/>
+      <line x1="21" y1="22.5" x2="24" y2="25.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      <circle cx="24" cy="25.5" r="1.1" fill="rgba(255,255,255,0.45)"/>
+    </svg>
+    <div>
+      <div class="nav-product">SmartStock</div>
+      <div class="nav-brand">by TecHive</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="product.html" class="nav-active">Product</a></li>
+    <li><a href="intelligence.html">Intelligence</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="results.html">Results</a></li>
+    <li><a href="demo.html">Demo</a></li>
+  </ul>
+  <a href="results.html#contact" class="nav-cta">Request Pilot</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <p class="section-label fade-up">The Product</p>
+    <h1 class="page-title fade-up">A camera that<br>watches your shelves.</h1>
+    <p class="page-sub fade-up">It mounts to the ceiling, monitors your products, and tells your team when something needs attention. No special IT setup. Plug it in and it works.</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <p class="section-label fade-up">How It Works</p>
+    <h2 class="section-title fade-up">Five steps. That's it.</h2>
+    <div class="how-grid">
+      <div class="steps-list">
+        <div class="step-item active" data-step="0">
+          <div class="step-icon">1</div>
+          <div class="step-content">
+            <h4>We install the cameras</h4>
+            <p>Small cameras mount to the ceiling above your shelves and food areas. One camera covers up to 6 shelf bays. Connects with a single ethernet cable.</p>
+          </div>
+        </div>
+        <div class="step-item" data-step="1">
+          <div class="step-icon">2</div>
+          <div class="step-content">
+            <h4>It learns your store</h4>
+            <p>Within 3 days, SmartStock knows where every product goes. No one has to program it. It figures out your layout by watching.</p>
+          </div>
+        </div>
+        <div class="step-item" data-step="2">
+          <div class="step-icon">3</div>
+          <div class="step-content">
+            <h4>It spots empty shelves</h4>
+            <p>The camera checks every shelf every 30 seconds. When something's missing, it knows within a minute. No more walking the floor to find gaps.</p>
+          </div>
+        </div>
+        <div class="step-item" data-step="3">
+          <div class="step-icon">4</div>
+          <div class="step-content">
+            <h4>Your team gets a phone alert</h4>
+            <p>The right person gets a notification on their phone. It tells them exactly which shelf, which product, and how long it's been empty.</p>
+          </div>
+        </div>
+        <div class="step-item" data-step="4">
+          <div class="step-icon">5</div>
+          <div class="step-content">
+            <h4>They restock. Camera confirms.</h4>
+            <p>Once your team restocks, the camera sees it and closes the alert automatically. Everything is logged so you can see response times in your reports.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3D Shelf Visualizer -->
+      <div class="shelf-scene">
+        <div class="shelf-3d">
+          <div class="shelf-unit" id="shelf-unit">
+            <div class="shelf-row" id="row0">
+              <div class="shelf-item full"></div><div class="shelf-item full"></div><div class="shelf-item empty" id="gap1"></div>
+              <div class="shelf-item full"></div><div class="shelf-item full"></div><div class="shelf-item full"></div>
+              <div class="shelf-item alert"></div>
+            </div>
+            <div class="shelf-row">
+              <div class="shelf-item full"></div><div class="shelf-item full"></div><div class="shelf-item full"></div>
+              <div class="shelf-item full"></div><div class="shelf-item empty" id="gap2"></div><div class="shelf-item full"></div>
+              <div class="shelf-item full"></div>
+            </div>
+            <div class="shelf-row">
+              <div class="shelf-item full"></div><div class="shelf-item full"></div><div class="shelf-item full"></div>
+              <div class="shelf-item full"></div><div class="shelf-item full"></div><div class="shelf-item full"></div>
+              <div class="shelf-item full"></div>
+            </div>
+            <div class="shelf-camera-dot"></div>
+            <div class="shelf-overlay">
+              <div class="detection-box" style="top:8px;left:62px;width:36px;height:46px;animation-delay:0.3s"></div>
+              <div class="detection-box" style="top:60px;left:152px;width:36px;height:46px;animation-delay:1.1s"></div>
+            </div>
+          </div>
+          <div class="shelf-side"></div>
+          <div class="shelf-top"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- CAMERA SECTION -->
+<section id="camera">
+  <div class="container">
+    <p class="section-label fade-up">The Camera</p>
+    <h2 class="section-title fade-up">What's inside the unit</h2>
+    <p class="section-sub fade-up">Click any card to highlight that part on the 3D model.</p>
+    <div class="camera-grid">
+      <div style="position:relative;">
+        <div id="cam-canvas-container">
+          <div class="cam-hint">Drag to rotate · Scroll to zoom</div>
+          <div class="part-tooltip" id="part-tooltip">Lens Assembly</div>
+        </div>
+      </div>
+      <div>
+        <div class="specs-grid">
+          <div class="spec-card" data-part="lens">
+            <div class="spec-icon">📷</div>
+            <div class="spec-name">Lens</div>
+            <div class="spec-value">High-Res Camera</div>
+            <div class="spec-detail">Wide-angle lens with night vision. Sees the whole shelf clearly, even in low light.</div>
+          </div>
+          <div class="spec-card" data-part="chip">
+            <div class="spec-icon">🧠</div>
+            <div class="spec-name">Brain</div>
+            <div class="spec-value">Built-In AI</div>
+            <div class="spec-detail">Processes everything inside the camera itself. No internet needed to detect gaps.</div>
+          </div>
+          <div class="spec-card" data-part="antenna">
+            <div class="spec-icon">📡</div>
+            <div class="spec-name">Connection</div>
+            <div class="spec-value">WiFi + Backup</div>
+            <div class="spec-detail">Connects to your store WiFi. Has a cellular backup so it stays online if WiFi drops.</div>
+          </div>
+          <div class="spec-card" data-part="battery">
+            <div class="spec-icon">⚡</div>
+            <div class="spec-name">Install</div>
+            <div class="spec-value">Ceiling Mount</div>
+            <div class="spec-detail">Mounts to the ceiling with one cable for both power and data. Ball joint adjusts the angle.</div>
+          </div>
+          <div class="spec-card" data-part="fov">
+            <div class="spec-icon">👁️</div>
+            <div class="spec-name">Coverage</div>
+            <div class="spec-value">6 Shelf Bays</div>
+            <div class="spec-detail">One camera covers a full aisle section. Most stores need 6 to 12 cameras total.</div>
+          </div>
+          <div class="spec-card" data-part="led">
+            <div class="spec-icon">📶</div>
+            <div class="spec-name">Reliability</div>
+            <div class="spec-value">95%+ Uptime</div>
+            <div class="spec-detail">Runs all day, every day. Typical stores need less than one service visit per month.</div>
+          </div>
+        </div>
+        <div class="spec-highlight fade-up">
+          <div class="spec-highlight-num">2,000+</div>
+          <div class="spec-highlight-text">stores already running SmartStock across 100+ retail chains. Same camera works in grocery, convenience, farm supply, and more.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg width="30" height="30" viewBox="4 2 30 26" fill="none">
+      <path d="M7 6.5L10.5 4.5L14 6.5V10.5L10.5 12.5L7 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M14 6.5L17.5 4.5L21 6.5V10.5L17.5 12.5L14 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M21 6.5L24.5 4.5L28 6.5V10.5L24.5 12.5L21 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M10.5 12.5L14 10.5L17.5 12.5V16.5L14 18.5L10.5 16.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M17.5 12.5L21 10.5L24.5 12.5V16.5L21 18.5L17.5 16.5Z" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+      <path d="M24.5 12.5L28 10.5L31.5 12.5V16.5L28 18.5L24.5 16.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <path d="M14 18.5L17.5 16.5L21 18.5V22.5L17.5 24.5L14 22.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <circle cx="10.5" cy="4.5" r="1.5" fill="rgba(255,255,255,0.85)"/>
+      <circle cx="28" cy="6.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="31.5" cy="16.5" r="1.3" fill="rgba(255,255,255,0.55)"/>
+      <circle cx="14" cy="22.5" r="1.2" fill="rgba(255,255,255,0.5)"/>
+      <line x1="21" y1="22.5" x2="24" y2="25.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      <circle cx="24" cy="25.5" r="1.1" fill="rgba(255,255,255,0.45)"/>
+    </svg>
+    <div>
+      <div class="footer-product">SmartStock</div>
+      <div class="footer-parent">by TecHive</div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="product.html">Product</a>
+    <a href="intelligence.html">Intelligence</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="results.html">Results</a>
+    <a href="demo.html">Demo</a>
+  </div>
+  <div class="footer-copy">© 2026 TecHive. All rights reserved.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ─── SCROLL ANIMATIONS ─── */
+const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.12 });
+document.querySelectorAll('.fade-up, .fade-in').forEach(el => obs.observe(el));
+
+/* ─── STEP TABS ─── */
+const steps = document.querySelectorAll('.step-item');
+steps.forEach(step => {
+  step.addEventListener('click', () => {
+    steps.forEach(s => s.classList.remove('active'));
+    step.classList.add('active');
+  });
+});
+
+/* ─── 3D CAMERA MODEL ─── */
+const container = document.getElementById('cam-canvas-container');
+const w = container.clientWidth, h = container.clientHeight;
+const camRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+camRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+camRenderer.setSize(w, h);
+camRenderer.shadowMap.enabled = true;
+camRenderer.toneMapping = THREE.ACESFilmicToneMapping;
+camRenderer.toneMappingExposure = 1.15;
+container.appendChild(camRenderer.domElement);
+
+const camScene = new THREE.Scene();
+camScene.fog = new THREE.FogExp2(0x060f24, 0.04);
+const camCamera = new THREE.PerspectiveCamera(38, w / h, 0.1, 200);
+camCamera.position.set(5.5, 2.5, 7.5);
+
+const controls = new THREE.OrbitControls(camCamera, camRenderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.5;
+controls.minDistance = 4;
+controls.maxDistance = 16;
+controls.enablePan = false;
+
+// Lighting — cinematic three-point + atmosphere
+camScene.add(new THREE.AmbientLight(0x8899bb, 0.35));
+const key = new THREE.DirectionalLight(0xffffff, 0.75);
+key.position.set(6, 10, 8);
+key.castShadow = true;
+camScene.add(key);
+const fill = new THREE.PointLight(0x00d4c8, 0.7, 35);
+fill.position.set(-6, 2, 4);
+camScene.add(fill);
+const rim = new THREE.PointLight(0x4f8cff, 0.5, 25);
+rim.position.set(0, -5, -5);
+camScene.add(rim);
+const warmFill = new THREE.PointLight(0xf0a830, 0.15, 20);
+warmFill.position.set(4, -3, 6);
+camScene.add(warmFill);
+
+// ─── MATERIALS (PBR) ───
+const M = {
+  body:    new THREE.MeshStandardMaterial({ color: 0x1a2540, roughness: 0.38, metalness: 0.55 }),
+  bodyTop: new THREE.MeshStandardMaterial({ color: 0x1e2d48, roughness: 0.4, metalness: 0.5 }),
+  dark:    new THREE.MeshStandardMaterial({ color: 0x0c1220, roughness: 0.2, metalness: 0.85 }),
+  accent:  new THREE.MeshStandardMaterial({ color: 0x283850, roughness: 0.3, metalness: 0.6 }),
+  chrome:  new THREE.MeshStandardMaterial({ color: 0x506070, roughness: 0.15, metalness: 0.88 }),
+  lens:    new THREE.MeshStandardMaterial({ color: 0x001520, roughness: 0.05, metalness: 0.15, emissive: 0x001a22, emissiveIntensity: 0.08 }),
+  lensG:   new THREE.MeshStandardMaterial({ color: 0x00c8c0, transparent: true, opacity: 0.88, roughness: 0.02, metalness: 0.1, emissive: 0x00d4c8, emissiveIntensity: 0.12 }),
+  glow:    new THREE.MeshStandardMaterial({ color: 0x00ffdd, emissive: 0x00ffdd, emissiveIntensity: 0.5, transparent: true, opacity: 0.55 }),
+  led:     new THREE.MeshStandardMaterial({ color: 0x00ff88, emissive: 0x00ff88, emissiveIntensity: 1.2 }),
+  ledAmb:  new THREE.MeshStandardMaterial({ color: 0xf0a830, emissive: 0xf0a830, emissiveIntensity: 0.6 }),
+  ledRed:  new THREE.MeshStandardMaterial({ color: 0xff2020, emissive: 0xff0000, emissiveIntensity: 0.9 }),
+  ir:      new THREE.MeshStandardMaterial({ color: 0x440000, emissive: 0x880000, emissiveIntensity: 0.5, roughness: 0.4 }),
+  ant:     new THREE.MeshStandardMaterial({ color: 0x1a2535, roughness: 0.4, metalness: 0.65 }),
+  chip:    new THREE.MeshStandardMaterial({ color: 0x0a3050, roughness: 0.15, metalness: 0.85, emissive: 0x003355, emissiveIntensity: 0.2 }),
+  trace:   new THREE.MeshStandardMaterial({ color: 0x00d4c8, emissive: 0x006666, emissiveIntensity: 0.4, roughness: 0.3 }),
+  pcb:     new THREE.MeshStandardMaterial({ color: 0x0a4030, roughness: 0.5, metalness: 0.3 }),
+  mount:   new THREE.MeshStandardMaterial({ color: 0x202e42, roughness: 0.35, metalness: 0.55 }),
+  rubber:  new THREE.MeshStandardMaterial({ color: 0x080c12, roughness: 0.85, metalness: 0.05 }),
+  fov:     new THREE.MeshStandardMaterial({ color: 0x00d4c8, transparent: true, opacity: 0.07, side: THREE.DoubleSide }),
+};
+
+// ─── EXPLODABLE GROUPS ───
+const grpMount   = new THREE.Group(); grpMount.name = 'battery';
+const grpBody    = new THREE.Group(); grpBody.name  = 'body';
+const grpLens    = new THREE.Group(); grpLens.name  = 'lens';
+const grpChip    = new THREE.Group(); grpChip.name  = 'chip';
+const grpAntenna = new THREE.Group(); grpAntenna.name = 'antenna';
+const grpLed     = new THREE.Group(); grpLed.name   = 'led';
+const grpFov     = new THREE.Group(); grpFov.name   = 'fov';
+
+const camGroup = new THREE.Group();
+
+// ═══ CEILING MOUNT (top) ═══
+// Plate
+const ceilPlate = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.16, 1.2), M.mount);
+ceilPlate.position.set(0, 3.6, 0);
+grpMount.add(ceilPlate);
+// Gasket strip
+const ceilGasket = new THREE.Mesh(new THREE.BoxGeometry(1.84, 0.03, 1.24), M.rubber);
+ceilGasket.position.set(0, 3.7, 0);
+grpMount.add(ceilGasket);
+// Screw holes (4 corners)
+[[-0.65,0,-0.42],[0.65,0,-0.42],[-0.65,0,0.42],[0.65,0,0.42]].forEach(([x,y,z]) => {
+  const screw = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.18, 10), M.chrome);
+  screw.position.set(x, 3.6+y, z);
+  grpMount.add(screw);
+});
+// Stem
+const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 1.2, 12), M.mount);
+stem.position.set(0, 2.92, 0);
+grpMount.add(stem);
+// Ball joint
+const ballJoint = new THREE.Mesh(new THREE.SphereGeometry(0.3, 16, 16), M.chrome);
+ballJoint.position.set(0, 2.28, 0);
+grpMount.add(ballJoint);
+// Short arm
+const arm = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.8, 0.28), M.mount);
+arm.position.set(0, 1.82, 0);
+grpMount.add(arm);
+
+// ═══ CAMERA BODY — RECTANGULAR BOX (like the case image) ═══
+// Main rectangular housing
+const bodyW = 3.4, bodyH = 1.8, bodyD = 1.7;
+const bodyBox = new THREE.Mesh(new THREE.BoxGeometry(bodyW, bodyH, bodyD), M.body);
+bodyBox.position.set(0, 0.5, 0);
+grpBody.add(bodyBox);
+
+// Top panel (slightly lighter)
+const topPanel = new THREE.Mesh(new THREE.BoxGeometry(bodyW - 0.04, 0.04, bodyD - 0.04), M.bodyTop);
+topPanel.position.set(0, 1.42, 0);
+grpBody.add(topPanel);
+
+// Front face plate (dark, where lens barrel exits)
+const frontPlate = new THREE.Mesh(new THREE.BoxGeometry(0.06, bodyH - 0.1, bodyD - 0.1), M.dark);
+frontPlate.position.set(bodyW/2 - 0.02, 0.5, 0);
+grpBody.add(frontPlate);
+
+// Edge trim lines (horizontal seams)
+const seam1 = new THREE.Mesh(new THREE.BoxGeometry(bodyW + 0.02, 0.04, 0.04), M.accent);
+seam1.position.set(0, 1.0, bodyD/2);
+grpBody.add(seam1);
+const seam2 = seam1.clone(); seam2.position.z = -bodyD/2;
+grpBody.add(seam2);
+
+// Side accent strips (chrome trim)
+const sideTrim = new THREE.Mesh(new THREE.BoxGeometry(bodyW + 0.02, 0.05, 0.02), M.chrome);
+sideTrim.position.set(0, 0.5, bodyD/2 + 0.01);
+grpBody.add(sideTrim);
+const sideTrim2 = sideTrim.clone(); sideTrim2.position.z = -(bodyD/2 + 0.01);
+grpBody.add(sideTrim2);
+
+// SmartStock label (side)
+const label = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.3, 0.02), M.dark);
+label.position.set(-0.3, 0.8, bodyD/2 + 0.015);
+grpBody.add(label);
+const labelTxt = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.05, 0.025), M.trace);
+labelTxt.position.set(-0.3, 0.8, bodyD/2 + 0.02);
+grpBody.add(labelTxt);
+
+// TecHive logo mark (small square)
+const logoMark = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.2, 0.025), M.trace);
+logoMark.position.set(-1.2, 0.8, bodyD/2 + 0.02);
+grpBody.add(logoMark);
+
+// Ventilation grille (rear face)
+for (let i = 0; i < 8; i++) {
+  const slot = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.05, bodyD * 0.5), M.dark);
+  slot.position.set(-bodyW/2 + 0.02, 0.25 + i * 0.12, 0);
+  grpBody.add(slot);
+}
+
+// Ethernet port (rear)
+const ethPort = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.25, 0.35), M.dark);
+ethPort.position.set(-bodyW/2 + 0.01, 0.7, -0.4);
+grpBody.add(ethPort);
+
+// Power port (rear)
+const pwrPort = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.12, 10), M.dark);
+pwrPort.rotation.z = Math.PI/2;
+pwrPort.position.set(-bodyW/2 + 0.01, 0.7, 0.4);
+grpBody.add(pwrPort);
+
+// ═══ LENS BARREL (protruding from front) ═══
+// Outer barrel
+const barrel = new THREE.Mesh(new THREE.CylinderGeometry(0.65, 0.7, 1.2, 28), M.dark);
+barrel.rotation.z = Math.PI/2;
+barrel.position.set(bodyW/2 + 0.55, 0.5, 0);
+grpLens.add(barrel);
+
+// Barrel grip rings (textured detail)
+for (let i = 0; i < 3; i++) {
+  const grip = new THREE.Mesh(new THREE.TorusGeometry(0.67, 0.03, 8, 28), M.accent);
+  grip.rotation.y = Math.PI/2;
+  grip.position.set(bodyW/2 + 0.2 + i * 0.3, 0.5, 0);
+  grpLens.add(grip);
+}
+
+// Front lens ring (chrome)
+const lensRingFront = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.06, 12, 28), M.chrome);
+lensRingFront.rotation.y = Math.PI/2;
+lensRingFront.position.set(bodyW/2 + 1.18, 0.5, 0);
+grpLens.add(lensRingFront);
+
+// Lens face (dark plate)
+const lensFace = new THREE.Mesh(new THREE.CircleGeometry(0.58, 32), M.lens);
+lensFace.rotation.y = Math.PI/2;
+lensFace.position.set(bodyW/2 + 1.16, 0.5, 0);
+grpLens.add(lensFace);
+
+// Lens glass
+const lensGlass = new THREE.Mesh(new THREE.CircleGeometry(0.42, 32), M.lensG);
+lensGlass.rotation.y = Math.PI/2;
+lensGlass.position.set(bodyW/2 + 1.17, 0.5, 0);
+grpLens.add(lensGlass);
+
+// Inner lens (pupil)
+const lensPupil = new THREE.Mesh(new THREE.CircleGeometry(0.2, 24), M.lens);
+lensPupil.rotation.y = Math.PI/2;
+lensPupil.position.set(bodyW/2 + 1.18, 0.5, 0);
+grpLens.add(lensPupil);
+
+// Lens glow
+const lensGlow = new THREE.Mesh(new THREE.CircleGeometry(0.1, 16), M.glow);
+lensGlow.rotation.y = Math.PI/2;
+lensGlow.position.set(bodyW/2 + 1.185, 0.5, 0);
+grpLens.add(lensGlow);
+
+// IR LED ring (around the lens, visible red in case image)
+for (let i = 0; i < 14; i++) {
+  const a = (i/14) * Math.PI * 2;
+  const ir = new THREE.Mesh(new THREE.SphereGeometry(0.04, 8, 8), M.ir);
+  ir.position.set(bodyW/2 + 1.14, 0.5 + Math.sin(a)*0.48, Math.cos(a)*0.48);
+  grpLens.add(ir);
+}
+
+// ═══ STATUS LEDs (front-top of body) ═══
+const ledMesh = new THREE.Mesh(new THREE.SphereGeometry(0.07, 14, 14), M.led);
+ledMesh.position.set(bodyW/2 - 0.3, 1.25, 0.5);
+grpLed.add(ledMesh);
+
+const ledMesh2 = new THREE.Mesh(new THREE.SphereGeometry(0.055, 12, 12), M.ledAmb);
+ledMesh2.position.set(bodyW/2 - 0.6, 1.25, 0.5);
+grpLed.add(ledMesh2);
+
+const ledRed = new THREE.Mesh(new THREE.SphereGeometry(0.06, 10, 10), M.ledRed);
+ledRed.position.set(bodyW/2 - 0.15, 0.5, bodyD/2 + 0.01);
+grpLed.add(ledRed);
+
+// ═══ ANTENNA (rear-top) ═══
+const antBase = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.17, 0.16, 12), M.ant);
+antBase.position.set(-bodyW/2 + 0.5, 1.48, 0);
+grpAntenna.add(antBase);
+
+const antJoint = new THREE.Mesh(new THREE.SphereGeometry(0.11, 10, 10), M.chrome);
+antJoint.position.set(-bodyW/2 + 0.5, 1.6, 0);
+grpAntenna.add(antJoint);
+
+const antMast = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.03, 1.5, 8), M.ant);
+antMast.position.set(-bodyW/2 + 0.5, 2.4, 0.04);
+antMast.rotation.z = 0.05;
+grpAntenna.add(antMast);
+
+const antTip = new THREE.Mesh(new THREE.SphereGeometry(0.055, 8, 8), M.chrome);
+antTip.position.set(-bodyW/2 + 0.51, 3.18, 0.06);
+grpAntenna.add(antTip);
+
+// ═══ AI CHIP (internal PCB, visible in exploded view) ═══
+const pcb = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.08, 1.2), M.pcb);
+pcb.position.set(0, 0.5, 0);
+grpChip.add(pcb);
+
+const chipDie = new THREE.Mesh(new THREE.BoxGeometry(0.6, 0.1, 0.5), M.chip);
+chipDie.position.set(0.2, 0.58, 0);
+grpChip.add(chipDie);
+
+// Traces
+[[-0.8,0],[-0.5,0.3],[-0.5,-0.3],[0,0.35],[0,-0.35],[0.5,0.2],[0.5,-0.2],[0.9,0]].forEach(([x,z]) => {
+  const t = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.02, 0.04), M.trace);
+  t.position.set(x, 0.55, z);
+  grpChip.add(t);
+});
+// Capacitors
+[[-1,0.4],[1,0.4],[1,-0.4],[-1,-0.4]].forEach(([x,z]) => {
+  const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.14, 8), M.dark);
+  cap.position.set(x, 0.58, z);
+  grpChip.add(cap);
+});
+
+// ═══ FOV CONE ═══
+const fovGeo = new THREE.ConeGeometry(3.5, 7, 32, 1, true);
+const fovMesh = new THREE.Mesh(fovGeo, M.fov);
+fovMesh.rotation.z = Math.PI/2;
+fovMesh.position.set(bodyW/2 + 4.5, 0.5, 0);
+fovMesh.visible = false;
+grpFov.add(fovMesh);
+const fovWire = new THREE.LineSegments(
+  new THREE.EdgesGeometry(fovGeo),
+  new THREE.LineBasicMaterial({ color: 0x00d4c8, transparent: true, opacity: 0.12 })
+);
+fovWire.rotation.z = Math.PI/2;
+fovWire.position.set(bodyW/2 + 4.5, 0.5, 0);
+fovWire.visible = false;
+grpFov.add(fovWire);
+
+// ═══ ASSEMBLE ═══
+camGroup.add(grpMount, grpBody, grpLens, grpChip, grpAntenna, grpLed, grpFov);
+camScene.add(camGroup);
+
+// ─── HIGHLIGHT SYSTEM ───
+const partGroups = [grpMount, grpBody, grpLens, grpChip, grpAntenna, grpLed, grpFov];
+
+// Store original materials for every mesh in each group
+const originalMats = new Map();
+partGroups.forEach(g => {
+  g.traverse(child => {
+    if (child.isMesh) originalMats.set(child, child.material);
+  });
+});
+
+const dimMat = new THREE.MeshStandardMaterial({ color: 0x0c1220, roughness: 0.6, metalness: 0.3, transparent: true, opacity: 0.25 });
+const glowOutline = new THREE.MeshStandardMaterial({ color: 0x00d4c8, emissive: 0x00d4c8, emissiveIntensity: 0.3, transparent: true, opacity: 0.15, side: THREE.BackSide });
+
+let currentHighlight = null;
+// Glow shells added to highlighted parts
+let glowShells = [];
+
+function highlightPart(partName) {
+  const isToggleOff = (currentHighlight === partName);
+  currentHighlight = isToggleOff ? null : partName;
+
+  // Remove old glow shells
+  glowShells.forEach(s => s.parent && s.parent.remove(s));
+  glowShells = [];
+
+  partGroups.forEach(g => {
+    const isTarget = (g.name === partName);
+    g.traverse(child => {
+      if (!child.isMesh) return;
+      if (isToggleOff) {
+        // Restore everything
+        child.material = originalMats.get(child) || child.material;
+      } else if (isTarget) {
+        // Restore original material on the target
+        child.material = originalMats.get(child) || child.material;
+        // Add glow shell (slightly scaled-up clone with emissive outline)
+        const shell = new THREE.Mesh(child.geometry.clone(), glowOutline);
+        shell.position.copy(child.position);
+        shell.rotation.copy(child.rotation);
+        shell.scale.copy(child.scale).multiplyScalar(1.08);
+        g.add(shell);
+        glowShells.push(shell);
+      } else {
+        // Dim non-target parts
+        child.material = dimMat;
+      }
+    });
+  });
+}
+
+// Highlight multiple groups at once
+function highlightParts(partNames) {
+  currentHighlight = partNames[0];
+  glowShells.forEach(s => s.parent && s.parent.remove(s));
+  glowShells = [];
+
+  partGroups.forEach(g => {
+    const isTarget = partNames.includes(g.name);
+    g.traverse(child => {
+      if (!child.isMesh) return;
+      if (isTarget) {
+        child.material = originalMats.get(child) || child.material;
+        const shell = new THREE.Mesh(child.geometry.clone(), glowOutline);
+        shell.position.copy(child.position);
+        shell.rotation.copy(child.rotation);
+        shell.scale.copy(child.scale).multiplyScalar(1.08);
+        g.add(shell);
+        glowShells.push(shell);
+      } else {
+        child.material = dimMat;
+      }
+    });
+  });
+}
+
+// ─── PART TARGETS ───
+const partTargets = {
+  lens:    { pos: new THREE.Vector3(5, 0, 4), look: new THREE.Vector3(2.5, 0.5, 0) },
+  chip:    { pos: new THREE.Vector3(2, 1, 5), look: new THREE.Vector3(0, 0.5, 0) },
+  antenna: { pos: new THREE.Vector3(-4, 4, 3), look: new THREE.Vector3(-1.2, 2.2, 0) },
+  battery: { pos: new THREE.Vector3(0, 6.5, 4), look: new THREE.Vector3(0, 3, 0) },
+  fov:     { pos: new THREE.Vector3(7, 0, 5), look: new THREE.Vector3(3, 0.5, 0) },
+  led:     { pos: new THREE.Vector3(3, 2.5, 3), look: new THREE.Vector3(1.2, 1, 0.5) }
+};
+
+const tooltip = document.getElementById('part-tooltip');
+const partNames = { lens: 'Lens Assembly', chip: 'Edge AI Processor', antenna: 'WiFi 6/7 Antenna', battery: 'Ceiling Mount', fov: 'Field of View (120°)', led: 'Status LEDs' };
+
+document.querySelectorAll('.spec-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const part = card.dataset.part;
+    const wasActive = card.classList.contains('active');
+    document.querySelectorAll('.spec-card').forEach(c => c.classList.remove('active'));
+    if (!wasActive) card.classList.add('active');
+    controls.autoRotate = false;
+
+    fovMesh.visible = (!wasActive && (part === 'fov'));
+    fovWire.visible = (!wasActive && (part === 'fov'));
+
+    // Coverage highlights both lens + FOV; uptime highlights body + LEDs
+    if (part === 'fov' && !wasActive) {
+      highlightParts(['fov', 'lens']);
+    } else if (part === 'led' && !wasActive) {
+      highlightParts(['led', 'body']);
+    } else {
+      highlightPart(part);
+    }
+
+    if (wasActive) {
+      setTimeout(() => { controls.autoRotate = true; }, 400);
+    }
+
+    // Animate camera
+    const target = wasActive
+      ? { pos: new THREE.Vector3(5.5, 2.5, 7.5), look: new THREE.Vector3(0, 0.8, 0) }
+      : partTargets[part];
+    if (target) {
+      const startPos = camCamera.position.clone();
+      const startLook = controls.target.clone();
+      let t = 0;
+      const mv = setInterval(() => {
+        t = Math.min(t + 0.03, 1);
+        const e = t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+        camCamera.position.lerpVectors(startPos, target.pos, e);
+        controls.target.lerpVectors(startLook, target.look, e);
+        controls.update();
+        if (t >= 1) clearInterval(mv);
+      }, 16);
+    }
+
+    tooltip.textContent = partNames[part] || part;
+    tooltip.classList.add('visible');
+    setTimeout(() => tooltip.classList.remove('visible'), 2500);
+  });
+});
+
+// Render loop
+let camT = 0;
+function renderCam() {
+  requestAnimationFrame(renderCam);
+  camT += 0.016;
+  controls.update();
+  // LED pulses (only when materials are original)
+  if (!currentHighlight || currentHighlight === 'led') {
+    ledMesh.material.emissiveIntensity = 0.8 + Math.sin(camT * 3.5) * 0.4;
+    ledMesh2.material.emissiveIntensity = 0.4 + Math.sin(camT * 2.1 + 1) * 0.3;
+    ledRed.material.emissiveIntensity = 0.6 + Math.sin(camT * 2) * 0.2;
+  }
+  if (!currentHighlight || currentHighlight === 'lens') {
+    lensGlow.material.emissiveIntensity = 0.35 + Math.sin(camT * 2.8) * 0.15;
+  }
+  // Pulse glow shells
+  glowShells.forEach(s => {
+    s.material.opacity = 0.1 + Math.sin(camT * 3) * 0.06;
+  });
+  camRenderer.render(camScene, camCamera);
+}
+renderCam();
+
+window.addEventListener('resize', () => {
+  const nw = container.clientWidth, nh = container.clientHeight;
+  camCamera.aspect = nw / nh;
+  camCamera.updateProjectionMatrix();
+  camRenderer.setSize(nw, nh);
+});
+</script>
+</body>
+</html>

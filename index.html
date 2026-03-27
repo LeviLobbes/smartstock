@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartStock — AI Shelf Intelligence by TecHive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <svg class="th-icon" width="36" height="36" viewBox="4 2 30 26" fill="none">
+      <!-- Honeycomb cluster: 7 hexagons in hive arrangement -->
+      <!-- Row 1: top 3 -->
+      <path d="M7 6.5L10.5 4.5L14 6.5V10.5L10.5 12.5L7 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M14 6.5L17.5 4.5L21 6.5V10.5L17.5 12.5L14 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M21 6.5L24.5 4.5L28 6.5V10.5L24.5 12.5L21 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <!-- Row 2: middle 3 offset -->
+      <path d="M10.5 12.5L14 10.5L17.5 12.5V16.5L14 18.5L10.5 16.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M17.5 12.5L21 10.5L24.5 12.5V16.5L21 18.5L17.5 16.5Z" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+      <path d="M24.5 12.5L28 10.5L31.5 12.5V16.5L28 18.5L24.5 16.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <!-- Row 3: bottom 1 -->
+      <path d="M14 18.5L17.5 16.5L21 18.5V22.5L17.5 24.5L14 22.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <!-- Node circles at vertices -->
+      <circle cx="10.5" cy="4.5" r="1.5" fill="rgba(255,255,255,0.85)"/>
+      <circle cx="28" cy="6.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="31.5" cy="16.5" r="1.3" fill="rgba(255,255,255,0.55)"/>
+      <circle cx="14" cy="22.5" r="1.2" fill="rgba(255,255,255,0.5)"/>
+      <!-- Extending arm from bottom node -->
+      <line x1="21" y1="22.5" x2="24" y2="25.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      <circle cx="24" cy="25.5" r="1.1" fill="rgba(255,255,255,0.45)"/>
+    </svg>
+    <div>
+      <div class="nav-product">SmartStock</div>
+      <div class="nav-brand">by TecHive</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-active">Overview</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="intelligence.html">Intelligence</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="results.html">Results</a></li>
+    <li><a href="demo.html">Demo</a></li>
+  </ul>
+  <a href="results.html#contact" class="nav-cta">Request Pilot</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge fade-in">Smarter Shelves. Happier Customers.</div>
+    <h1 class="hero-title fade-up">
+      Know What's<br>
+      <span class="line2">On Every Shelf.</span><br>
+      All the Time.
+    </h1>
+    <p class="hero-sub fade-up">SmartStock watches your shelves so your team doesn't have to. It spots empty spots, alerts your staff, and learns what to reorder before you run out.</p>
+    <div class="hero-buttons fade-up">
+      <a href="demo.html" class="btn-primary">See the Demo</a>
+      <a href="pricing.html" class="btn-ghost">View Pricing</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <p class="section-label fade-up">The Problem</p>
+    <h2 class="section-title fade-up">Empty shelves cost you money</h2>
+    <p class="section-sub fade-up">Your customers come in looking for something specific. If it's not on the shelf, they leave. You had the product in the back. Nobody knew to restock it.</p>
+    <div class="stats-grid">
+      <div class="stat-card fade-up">
+        <div class="stat-number" data-target="32" data-suffix="%">0%</div>
+        <div class="stat-label">of customers couldn't find what they came in for</div>
+      </div>
+      <div class="stat-card fade-up" style="transition-delay:0.1s">
+        <div class="stat-number" data-target="15" data-suffix="%">0%</div>
+        <div class="stat-label">left the store without buying anything at all</div>
+      </div>
+      <div class="stat-card fade-up" style="transition-delay:0.2s">
+        <div class="stat-number" data-prefix="$" data-target="125" data-suffix="K">$0K</div>
+        <div class="stat-label">in lost revenue per store, per year, from empty shelves</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- SOLUTIONS OVERVIEW -->
+<section id="solutions">
+  <div class="container">
+    <p class="section-label fade-up">How It Helps</p>
+    <h2 class="section-title fade-up">Three things SmartStock does for you</h2>
+    <p class="section-sub fade-up">Simple setup. Real results. No IT team required.</p>
+    <div class="solutions-grid">
+      <a href="product.html" class="solution-card fade-up">
+        <div class="sol-icon">📷</div>
+        <div class="sol-title">Watches Your Shelves</div>
+        <div class="sol-desc">Small cameras mount above your aisles and food sections. They check every shelf every 30 seconds and alert staff when something needs restocking.</div>
+        <div class="sol-link">See the camera →</div>
+      </a>
+      <a href="intelligence.html" class="solution-card fade-up" style="transition-delay:0.1s">
+        <div class="sol-icon">📊</div>
+        <div class="sol-title">Learns What You Need</div>
+        <div class="sol-desc">Over time, SmartStock learns your store's patterns. It recommends reorders before you run out, adjusting for weather, holidays, and busy days.</div>
+        <div class="sol-link">See the intelligence →</div>
+      </a>
+      <a href="pricing.html" class="solution-card fade-up" style="transition-delay:0.2s">
+        <div class="sol-icon">💰</div>
+        <div class="sol-title">Pays for Itself</div>
+        <div class="sol-desc">Two packages to choose from. Both pay back in under 7 months through reduced waste, fewer empty shelves, and less time spent on manual checks.</div>
+        <div class="sol-link">See pricing →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg width="30" height="30" viewBox="4 2 30 26" fill="none">
+      <path d="M7 6.5L10.5 4.5L14 6.5V10.5L10.5 12.5L7 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M14 6.5L17.5 4.5L21 6.5V10.5L17.5 12.5L14 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M21 6.5L24.5 4.5L28 6.5V10.5L24.5 12.5L21 10.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M10.5 12.5L14 10.5L17.5 12.5V16.5L14 18.5L10.5 16.5Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.75)" stroke-width="1"/>
+      <path d="M17.5 12.5L21 10.5L24.5 12.5V16.5L21 18.5L17.5 16.5Z" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+      <path d="M24.5 12.5L28 10.5L31.5 12.5V16.5L28 18.5L24.5 16.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <path d="M14 18.5L17.5 16.5L21 18.5V22.5L17.5 24.5L14 22.5Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+      <circle cx="10.5" cy="4.5" r="1.5" fill="rgba(255,255,255,0.85)"/>
+      <circle cx="28" cy="6.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="31.5" cy="16.5" r="1.3" fill="rgba(255,255,255,0.55)"/>
+      <circle cx="14" cy="22.5" r="1.2" fill="rgba(255,255,255,0.5)"/>
+      <line x1="21" y1="22.5" x2="24" y2="25.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+      <circle cx="24" cy="25.5" r="1.1" fill="rgba(255,255,255,0.45)"/>
+    </svg>
+    <div>
+      <div class="footer-product">SmartStock</div>
+      <div class="footer-parent">by TecHive</div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="product.html">Product</a>
+    <a href="intelligence.html">Intelligence</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="results.html">Results</a>
+    <a href="demo.html">Demo</a>
+  </div>
+  <div class="footer-copy">© 2026 TecHive. All rights reserved.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ─── HERO PARTICLE FIELD v2 ─── */
+const canvas = document.getElementById('hero-canvas');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.1;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x060e1e, 0.012);
+const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 42;
+
+// Dual-layer particles for depth
+function makeParticles(count, spread, size, color, opacity) {
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    pos[i*3]   = (Math.random()-0.5) * spread[0];
+    pos[i*3+1] = (Math.random()-0.5) * spread[1];
+    pos[i*3+2] = (Math.random()-0.5) * spread[2];
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const m = new THREE.PointsMaterial({ color, size, transparent: true, opacity, sizeAttenuation: true });
+  return new THREE.Points(g, m);
+}
+const pMain = makeParticles(2800, [130,90,70], 0.18, 0x00d4c8, 0.5);
+const pDim  = makeParticles(1200, [160,110,90], 0.08, 0x4f8cff, 0.25);
+const pWarm = makeParticles(400,  [100,70,50],  0.25, 0xf0a830, 0.15);
+scene.add(pMain, pDim, pWarm);
+
+// Dynamic connection lines
+const lineCount = 80;
+const lineGeo = new THREE.BufferGeometry();
+const lineVerts = [];
+for (let i = 0; i < lineCount; i++) {
+  const x1 = (Math.random()-0.5)*110, y1 = (Math.random()-0.5)*75, z1 = (Math.random()-0.5)*50;
+  const angle = Math.random() * Math.PI * 2;
+  const len = 6 + Math.random() * 16;
+  lineVerts.push(x1, y1, z1, x1+Math.cos(angle)*len, y1+Math.sin(angle)*len*0.7, z1+(Math.random()-0.5)*8);
+}
+lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(lineVerts, 3));
+const lineMat = new THREE.LineBasicMaterial({ color: 0x00d4c8, transparent: true, opacity: 0.06 });
+const lines = new THREE.LineSegments(lineGeo, lineMat);
+scene.add(lines);
+
+// Floating camera (bullet-style, matches product page)
+const camGroup = new THREE.Group();
+const mBody = new THREE.MeshStandardMaterial({ color: 0x1a2438, roughness: 0.35, metalness: 0.65 });
+const mDark = new THREE.MeshStandardMaterial({ color: 0x0c1420, roughness: 0.2, metalness: 0.85 });
+const mAccent = new THREE.MeshStandardMaterial({ color: 0x2a3a55, roughness: 0.25, metalness: 0.75 });
+
+// Body tube
+const hBody = new THREE.Mesh(new THREE.CylinderGeometry(0.85, 0.85, 2.8, 24), mBody);
+hBody.rotation.z = Math.PI/2;
+camGroup.add(hBody);
+// Front dome
+const hDome = new THREE.Mesh(new THREE.SphereGeometry(0.85, 24, 12, 0, Math.PI*2, 0, Math.PI/2), mBody);
+hDome.rotation.z = -Math.PI/2; hDome.position.set(1.4, 0, 0);
+camGroup.add(hDome);
+// Seam ring
+const hSeam = new THREE.Mesh(new THREE.TorusGeometry(0.87, 0.03, 8, 24), mAccent);
+hSeam.rotation.y = Math.PI/2; hSeam.position.set(0.3, 0, 0);
+camGroup.add(hSeam);
+// Lens housing
+const hLens = new THREE.Mesh(new THREE.CylinderGeometry(0.52, 0.56, 0.6, 24), mDark);
+hLens.rotation.z = Math.PI/2; hLens.position.set(1.7, 0, 0);
+camGroup.add(hLens);
+// Lens glass
+const hGlass = new THREE.Mesh(new THREE.CircleGeometry(0.42, 24), new THREE.MeshStandardMaterial({ color: 0x00c8c0, transparent: true, opacity: 0.9, roughness: 0.05, metalness: 0.2, emissive: 0x00d4c8, emissiveIntensity: 0.12 }));
+hGlass.rotation.y = Math.PI/2; hGlass.position.set(2.01, 0, 0);
+camGroup.add(hGlass);
+// Lens glow
+const lensGlow = new THREE.Mesh(new THREE.CircleGeometry(0.15, 16), new THREE.MeshStandardMaterial({ color: 0x00ffdd, emissive: 0x00ffdd, emissiveIntensity: 0.4, transparent: true, opacity: 0.6 }));
+lensGlow.rotation.y = Math.PI/2; lensGlow.position.set(2.02, 0, 0);
+camGroup.add(lensGlow);
+// IR LEDs
+for (let i = 0; i < 8; i++) {
+  const a = (i/8)*Math.PI*2;
+  const ir = new THREE.Mesh(new THREE.SphereGeometry(0.03, 6, 6), new THREE.MeshStandardMaterial({ color: 0x330000, emissive: 0x440000, emissiveIntensity: 0.3 }));
+  ir.position.set(2.0, Math.sin(a)*0.38, Math.cos(a)*0.38);
+  camGroup.add(ir);
+}
+// Status LED
+const ledMesh = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 12), new THREE.MeshStandardMaterial({ color: 0x00ff88, emissive: 0x00ff88, emissiveIntensity: 1.2 }));
+ledMesh.position.set(1.1, 0.65, 0.5);
+camGroup.add(ledMesh);
+// Antenna
+const hAnt = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.035, 1.2, 8), new THREE.MeshStandardMaterial({ color: 0x111c2c, roughness: 0.45, metalness: 0.65 }));
+hAnt.position.set(-1.1, 1.4, 0);
+camGroup.add(hAnt);
+const hAntTip = new THREE.Mesh(new THREE.SphereGeometry(0.055, 8, 8), mAccent);
+hAntTip.position.set(-1.1, 2.02, 0);
+camGroup.add(hAntTip);
+// Bracket
+const hBrack = new THREE.Mesh(new THREE.BoxGeometry(0.28, 1.2, 0.28), mDark);
+hBrack.position.set(-0.15, -1.4, 0);
+camGroup.add(hBrack);
+const hPivot = new THREE.Mesh(new THREE.SphereGeometry(0.22, 12, 12), mAccent);
+hPivot.position.set(-0.15, -0.75, 0);
+camGroup.add(hPivot);
+
+camGroup.position.set(11, -2, -12);
+camGroup.rotation.y = -0.3;
+scene.add(camGroup);
+
+// Lighting — warmer, more atmospheric
+const ambient = new THREE.AmbientLight(0x8899bb, 0.3);
+const keyLight = new THREE.DirectionalLight(0xffffff, 0.6);
+keyLight.position.set(8, 12, 18);
+const tealPoint = new THREE.PointLight(0x00d4c8, 1.0, 50);
+tealPoint.position.set(12, 6, 15);
+const warmPoint = new THREE.PointLight(0xf0a830, 0.3, 40);
+warmPoint.position.set(-15, -5, 10);
+const rimLight = new THREE.PointLight(0x4f8cff, 0.4, 35);
+rimLight.position.set(-8, 8, -10);
+scene.add(ambient, keyLight, tealPoint, warmPoint, rimLight);
+
+// Mouse parallax
+let mouseX = 0, mouseY = 0;
+document.addEventListener('mousemove', e => {
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+  mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+});
+
+let t = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  t += 0.004;
+
+  // Particle drift
+  pMain.rotation.y = t * 0.06 + mouseX * 0.02;
+  pMain.rotation.x = t * 0.03 + mouseY * 0.01;
+  pDim.rotation.y = t * 0.04;
+  pDim.rotation.x = t * 0.02;
+  pWarm.rotation.y = -t * 0.03;
+  pWarm.rotation.z = t * 0.015;
+  lines.rotation.y = t * 0.05;
+
+  // Camera mesh float
+  camGroup.rotation.y = -0.3 + Math.sin(t * 0.6) * 0.25;
+  camGroup.rotation.x = Math.sin(t * 0.4) * 0.06;
+  camGroup.position.y = -2 + Math.sin(t * 0.8) * 0.9;
+
+  // Lens glow pulse
+  lensGlow.material.emissiveIntensity = 0.3 + Math.sin(t * 3) * 0.15;
+  ledMesh.material.emissiveIntensity = 0.8 + Math.sin(t * 4) * 0.4;
+
+  // Camera parallax
+  camera.position.x = mouseX * 1.5;
+  camera.position.y = -mouseY * 0.8;
+  camera.lookAt(0, 0, 0);
+
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+/* ─── SCROLL ANIMATIONS ─── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+
+/* ─── COUNTER ANIMATION ─── */
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = +el.dataset.target;
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    let current = 0;
+    const step = target / 50;
+    const interval = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = prefix + Math.round(current) + suffix;
+      if (current >= target) clearInterval(interval);
+    }, 28);
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObs.observe(el));
+</script>
+</body>
+</html>
